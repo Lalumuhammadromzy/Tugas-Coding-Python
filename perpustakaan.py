@@ -1,15 +1,15 @@
 class Buku:
-    def _init_(self, judul, penulis, genre, status):
+    def __init__(self, judul, penulis, genre, status):
         self.judul   = judul
         self.penulis = penulis
         self.genre   = genre
         self.status  = status
         
-    def _str_(self):
+    def __str__(self):
         return f"{self.judul} - karya : {self.penulis} - bergenre : {self.genre}- status : {self.status}"
         
 class Perpustakaan:
-    def _init_(self):
+    def __init__(self):
         self.koleksi_buku = []
         
     def check_ketersediaan(self):
@@ -48,7 +48,7 @@ class Perpustakaan:
         print(f"Buku dengan judul '{judul}' tidak ditemukan.")
     
 class Anggota:
-    def _init_(self, nama, ID, alamat=None, nomor_telepon=None):
+    def __init__(self, nama, ID, alamat=None, nomor_telepon=None):
         self.nama          = nama
         self.ID            = ID
         self.alamat        = alamat
@@ -124,5 +124,5 @@ def main():
             print("Maaf judul buku yg anda masukkan tidak terdaftar di dalam perpustakaan kami")
     else:
         print("Anda salah memilih.")
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
